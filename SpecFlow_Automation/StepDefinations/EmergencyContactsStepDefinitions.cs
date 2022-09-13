@@ -28,10 +28,11 @@ namespace SpecFlow_Automation.StepDefinations
             AutomationHooks.driver.FindElement(By.XPath("(//button[@type='button'])[2]")).Click();
 
         }
-
+        private static Table tbl;
         [When(@"I fill the Add Emergency Contact section")]
         public void WhenIFillTheAddEmergencyContactSection(Table table)
         {
+            tbl = table;
             String name = table.Rows[0]["Name"];
             String relationship = table.Rows[0]["Relationship"];
             String homeTelephone = table.Rows[0]["Home_Telephone"];
@@ -56,7 +57,10 @@ namespace SpecFlow_Automation.StepDefinations
         public void ThenIVerifyTheAddedName()
         {
 
-           //String nameValue =  AutomationHooks.driver.FindElement(By.XPath("(//div[@class='oxd-table-cell oxd-padding-cell']//div)[3]")).GetAttribute();
+            String actualName =  AutomationHooks.driver.FindElement(By.XPath("//div[contains(@class,'oxd-table')]")).Text;
+            String expectedName = tbl.Rows[0]["Name"];
+
+            Assert.Contains(expectedName, actualName);
 
         }
 
