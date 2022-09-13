@@ -22,7 +22,7 @@ Scenario: Find Pet By non-existing PetId
   And I should get a message as 'Pet not found'
 
   Scenario: Delete pet by petid 
-  Given I have base url 'https://petstore.swagger.io/v2/' and resource 'pet/102'
+  Given I have base url 'https://petstore.swagger.io/v2/' and resource 'pet/103'
   And I need api_key 'AK888' in the header
   When I do the Delete Request
   Then I should get a response as 200

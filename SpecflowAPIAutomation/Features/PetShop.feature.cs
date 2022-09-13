@@ -202,7 +202,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 25
-  testRunner.Given("I have base url \'https://petstore.swagger.io/v2/\' and resource \'pet/102\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I have base url \'https://petstore.swagger.io/v2/\' and resource \'pet/103\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 26
   testRunner.And("I need api_key \'AK888\' in the header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
