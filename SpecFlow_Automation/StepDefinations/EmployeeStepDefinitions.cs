@@ -11,13 +11,13 @@ namespace SpecFlow_Automation.StepDefinations
         [When(@"I enter username as '([^']*)'")]
         public void WhenIEnterUsernameAs(string username)
         {
-            AutomationHooks.driver.FindElement(By.Name("username")).SendKeys(username);
+            AutomationHooks.driver.FindElement(By.XPath("//label[text()='Username']/following::input")).SendKeys(username);
         }
 
         [When(@"I enter password as '([^']*)'")]
-        public void WhenIEnterPasswordAs(string p0)
+        public void WhenIEnterPasswordAs(string password)
         {
-            AutomationHooks.driver.FindElement(By.Name("password")).SendKeys(p0);
+            AutomationHooks.driver.FindElement(By.XPath("//label[text()='Password']/following::input")).SendKeys(password);
         }
 
         [When(@"I click on login")]

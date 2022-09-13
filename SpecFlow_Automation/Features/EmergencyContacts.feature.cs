@@ -93,7 +93,7 @@ namespace SpecFlow_Automation.Features
         [Xunit.SkippableTheoryAttribute(DisplayName="Add Emergency contact")]
         [Xunit.TraitAttribute("FeatureTitle", "EmergencyContacts")]
         [Xunit.TraitAttribute("Description", "Add Emergency contact")]
-        [Xunit.InlineDataAttribute("Saul", "Father", "43444", "3554", "25554", new string[0])]
+        [Xunit.InlineDataAttribute("Harshad", "brother", "9999", "99", "9999", new string[0])]
         public void AddEmergencyContact(string name, string relationship, string home_Telephone, string mobile, string work_Telephone, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

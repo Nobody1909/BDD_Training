@@ -56,8 +56,10 @@ namespace SpecFlow_Automation.StepDefinations
         public void ThenIVerifyTheAddedName()
         {
 
+           //String nameValue =  AutomationHooks.driver.FindElement(By.XPath("(//div[@class='oxd-table-cell oxd-padding-cell']//div)[3]")).GetAttribute();
+
         }
 
-     
+
     }
 }

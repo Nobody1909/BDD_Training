@@ -24,13 +24,13 @@ namespace SpecFlow_Automation
         [When(@"I provide username as '([^']*)'")]
         public void WhenIProvideUsernameAs(string username)
         {
-            AutomationHooks.driver.FindElement(By.Name("username")).SendKeys(username);
+            AutomationHooks.driver.FindElement(By.XPath("//label[text()='Username']/following::input")).SendKeys(username);
         }
 
         [When(@"I provide password as '([^']*)'")]
         public void WhenIProvidePasswordAs(string password)
         {
-            AutomationHooks.driver.FindElement(By.Name("password")).SendKeys(password);
+            AutomationHooks.driver.FindElement(By.XPath("//label[text()='Password']/following::input")).SendKeys(password);
         }
 
         [When(@"I Click on login")]
